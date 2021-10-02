@@ -2,7 +2,7 @@ from tkinter import *
 import parser
 
 root = Tk()
-root.title('Calculator')
+root.title('Calculators')
 
 i = 0
 
@@ -11,7 +11,7 @@ def get_variables(num):
     display.insert(i, num)
     i += 1
 
-def calculate():
+def calculates():
     entire_string = display.get()
     try:
         a = parser.expr(entire_string).compile()
@@ -20,7 +20,7 @@ def calculate():
         display.insert(0, result)
     except Exception:
         clear_all()
-        display.insert(0, "Error")
+        display.insert(0, "Errors")
 
 def get_operation(operator):
     global i
